@@ -29,6 +29,8 @@ def server_status(url):
                 if cookie.expires:
                     seconds = cookie.expires/1000
                     print('Expires: ', datetime.fromtimestamp(seconds).strftime('%Y-%m-%d   '))
+                print('Headers', r.headers)
+
 
         else:
             print("Cookies not found")
@@ -40,7 +42,7 @@ def server_status(url):
 def main():
     url = input("Enter a URL: ")
     server_status(url)
-    # with requests.get(url) as response:  # το αντικείμενο response
+    #with requests.get(url) as response:  # το αντικείμενο response
     #    html = response.text
     #    more(html)
 
@@ -48,4 +50,3 @@ def main():
 if __name__ == "__main__":
     main()
 
-main()
