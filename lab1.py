@@ -27,7 +27,7 @@ def server_status(url):
                 print('Name: ', cookie.name, end="\t\t\t")
                 #print('Cookie expire: ', cookie.expires)
                 if cookie.expires:
-                    seconds = cookie.expires/1000
+                    seconds = cookie.expires
                     print('Expires: ', datetime.fromtimestamp(seconds).strftime('%Y-%m-%d   '))
                 print('Headers', r.headers)
 
